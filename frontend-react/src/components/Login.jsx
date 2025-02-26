@@ -11,23 +11,22 @@ const Login = () => {
     const [loading, setLoading]  = useState(false)
     const navigate = useNavigate()
     const [error, setError] = useState('')
-    const {isLoggedIn,setIsLoggedIn} = useContext(AuthContext)
+    const { isLoggedIn, setIsLoggedIn} = useContext(AuthContext)
 
     const handleLogin = async (e) => {
         e.preventDefault();
         setLoading(true);
 
-        const userData = {username, password}
-        console.log("userData is",userData);
+        const authData = {username, password}
+        console.log("userData is",authData);
         
         try {
-            const response =  await axios.post('http://127.0.0.1:8000/api/v1/token/',userData)
-            localStorage.setItem('accessToken', response.data.access)
-            localStorage.setItem('refreshToken', response.data.refresh)
-            console.log("Login Successful")
-            navigate('/')
-            setIsLoggedIn(true)
-            
+          const response =  await axios.post('http://127.0.0.1:8000/api/v1/token/',authData)
+          localStorage.setItem('access_token', response.data.access)
+          localStorage.setItem('refresh_token', response.data.refresh)
+          console.log("Login Successful")
+          setIsLoggedIn(true)
+          navigate('/dashboard')
             
             
         }catch(error) {
