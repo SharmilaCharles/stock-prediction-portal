@@ -65,7 +65,14 @@ const Dashboard = () => {
   }
   return (
     <div className = 'container'>
+      
       <div className='row'>
+      <h1 className='text-light'> Stock Price Prediction using ML (LSTM), Django, and React</h1>
+    <p className='text-light'>Stock price prediction is a challenging yet interesting problem in 
+      financial forecasting. This project leverages Long Short-Term Memory (LSTM) networks, 
+      Django (Django REST Framework) for the backend, and React for the frontend to create an interactive 
+      stock price prediction system. The system allows users to enter a stock ticker and receive a prediction 
+      based on historical stock data.</p>
         <div className='col-md-6 mx-auto'>
           <form onSubmit={handleSubmit}> 
             <input type='text' className='form-control' placeholder='Enter stock Ticker' 
@@ -102,6 +109,7 @@ const Dashboard = () => {
             </tr>
         </tbody>
     </table>
+    
     </div>
 
         {/*print prediction plots */}
