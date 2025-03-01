@@ -42,6 +42,7 @@ const Dashboard = () => {
       const maa200Url = `${backendRoot}${response.data.plot_200_dma}`
       const predictionUrl = `${backendRoot}${response.data.plot_prediction}`
       // console.log(plotUrl);
+
       setPlot(plotUrl)
       setMA100(maa100Url)
       setMA200(maa200Url)
@@ -75,7 +76,34 @@ const Dashboard = () => {
                 <FontAwesomeIcon icon={faSpinner} spin/>Please wait.. </span> : 'See Prediction'}
             </button> 
           </form>
-        </div>
+        <table className='text-light'>
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Ticker</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Apple Inc.</td>
+                <td>AAPL</td>
+            </tr>
+            <tr>
+                <td>Microsoft Corp.</td>
+                <td>MSFT</td>
+            </tr>
+            <tr>
+                <td>Google (Alphabet)</td>
+                <td>GOOG</td>
+            </tr>
+            <tr>
+                <td>TESLA</td>
+                <td>TSLA</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
         {/*print prediction plots */}
         {prediction && (
                  <div className='prediction mt-5'>
