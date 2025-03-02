@@ -1,13 +1,14 @@
 body {
-    background-color: #212529;
+    background-color: #ffffff;
 }
 .navbar-brand{
     font-size: 30px;
+    color: #ff3a3a;
     font-weight: 700;
 }
 
 .bg-light-dark{
-    background-color: #2b3035;
+    background-color: #eeeeee;
 }
 
 #root {
@@ -17,7 +18,8 @@ body {
 }
 
 .container{
-    flex:1
+    flex:1;
+    border: 1px #fe7070;
 }
 
 table {
@@ -25,12 +27,30 @@ table {
     border-collapse: collapse;
     margin: 20px 0;
     font-size: 18px;
-    text-align: left;
+    text-align: center;
+
 }
 th, td {
     padding: 10px;
     border: 1px solid #ddd;
 }
 th {
-    background-color: #fe7070;
+    background-color: #bababa;
 }
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+h2 {
+    text-align: left;
+    text-transform: uppercase;
+    color: rgb(107, 107, 107);
+}
+

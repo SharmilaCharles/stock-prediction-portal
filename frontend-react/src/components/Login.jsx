@@ -43,7 +43,7 @@ const Login = () => {
        <div className='container'>
          <div className='row justify-content-center '>
            <div className='col-md-6 bg-light-dark p-5 rounded' >
-             <h3 className='text-light text-center mb-4'> Login </h3>
+             <h3 className='text text-center mb-4'> Login </h3>
              <form onSubmit={handleLogin}>
                <div className='mb-3'>
                <input type="text" className='form-control' placeholder='Username' value={username} onChange={(e)=> setUsername(e.target.value)}/>

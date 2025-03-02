@@ -66,15 +66,19 @@ const Dashboard = () => {
   return (
     <div className = 'container'>
       
-      <div className='row'>
-      <h1 className='text-light'> Stock Price Prediction using ML (LSTM), Django, and React</h1>
-    <p className='text-light'>Stock price prediction is a challenging yet interesting problem in 
+    <div className='row'>
+      <h3 className='text-dark' > Stock Price Prediction using ML (LSTM), Django, and React</h3>
+     <br/><br/>
+      <p className=''>Stock price prediction is a challenging yet interesting problem in 
       financial forecasting. This project leverages Long Short-Term Memory (LSTM) networks, 
       Django (Django REST Framework) for the backend, and React for the frontend to create an interactive 
       stock price prediction system. The system allows users to enter a stock ticker and receive a prediction 
       based on historical stock data.</p>
-        <div className='col-md-6 mx-auto'>
+      <br/><br/><br/><br/>
+      <div className='p-3 bg-light-dark'>
+        <div className='col-md-8 mx-auto'>
           <form onSubmit={handleSubmit}> 
+          
             <input type='text' className='form-control' placeholder='Enter stock Ticker' 
             onChange = {(e)=> setTicker(e.target.value)} required/>
             <small>{error && <div className='text-danger'>{error}</div>}</small>
@@ -83,7 +87,12 @@ const Dashboard = () => {
                 <FontAwesomeIcon icon={faSpinner} spin/>Please wait.. </span> : 'See Prediction'}
             </button> 
           </form>
-        <table className='text-light'>
+        </div>
+        
+        </div> 
+        <br/><br/><br/><br/>
+        <div className='container'>
+        <table className='text-dark'>
         <thead>
             <tr>
                 <th>Company</th>
@@ -139,7 +148,7 @@ const Dashboard = () => {
                    )}
                  </div>
        
-                 <div className='text-light p-3'>
+                 <div className='text-dark p-3'>
                    <h4>Model Evaluation</h4>
                    <p>Mean Squared Error(MSE): {mse}</p>
                    <p>Root Mean Squared Error(RMSE): {rmse}</p>
